@@ -1,0 +1,25 @@
+{
+  "name": "github-signature-verifier",
+  "version": "0.0.1",
+  "description": "A NodeJS Lambda function to verify signatures sent in GitHub Webhooks",
+  "main": "github-signature-verifier.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ComparetheMarket/github-signature-verifier.git"
+  },
+  "author": "Anton Osmond <antonosmond@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ComparetheMarket/github-signature-verifier/issues"
+  },
+  "homepage": "https://github.com/ComparetheMarket/github-signature-verifier#readme",
+  "dependencies": {
+    "aws-sdk": "^2.22.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.0"
+  }
+}
