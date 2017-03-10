@@ -19,10 +19,10 @@ In order to verify this signature in our Lambda functions, we need to take the r
 The secret used by the `githubSignatureVerifier` function is stored and encrypted in AWS Parameter Store with the name `GitHubWebhookSecret`. It is the value of this parameter which should be added to your GitHub Webhooks.
 
 #### Usage
-To avoid repeating the verification logic in multiple places and to ensure other functions don't need access to the secret, the `githubSignatureVerifier` function will handle the signature verification and can be invoked by other Lambda functions which need it. You will need to invoke the `githubSignatureVerifier` function from within your own function and a detailed example can be found [here](example.js).
+To avoid repeating the verification logic in multiple places and to ensure other functions don't need access to the secret, the `githubSignatureVerifier` function will handle the signature verification and can be invoked by other Lambda functions which need it. You will need to invoke the `githubSignatureVerifier` function from within your own function and a detailed example can be found [here](src/example.js).
 
 #### Testing your Lambda function
-Use the [create-test-event.js](create-test-event.js) file in this repo to generate Lambda test events for testing signature verification:
+Use the [create-test-event.js](src/create-test-event.js) file in this repo to generate Lambda test events for testing signature verification:
 ```sh
 node create-test-event.js
 ```
