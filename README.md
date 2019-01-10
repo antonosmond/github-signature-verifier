@@ -13,7 +13,7 @@ If a secret has been added to the Webhook in GitHub, it will be used in combinat
 In order to verify this signature in our Lambda functions, we need to take the request body we've received along with our own copy of the secret, generate the HMAC-SHA1 hash and compare it to the hash we received from GitHub in the `X-Hub-Signature` header. If the hashes match, we know that the request we've received is a genuine request from our own GitHub account and the payload has not been tampered with.
 
 #### Signature Verification Flow
-![alt tag](https://github.com/ComparetheMarket/github-signature-verifier/blob/master/GitHubSignatureVerificationFlow.png)
+![alt tag](https://github.com/antonosmond/github-signature-verifier/blob/master/GitHubSignatureVerificationFlow.png)
 
 #### The Secret
 The secret used by the `githubSignatureVerifier` function is stored and encrypted in AWS Parameter Store with the name `GitHubWebhookSecret`. It is the value of this parameter which should be added to your GitHub Webhooks.
