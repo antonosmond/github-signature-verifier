@@ -20,6 +20,6 @@
     "aws-sdk": "^2.22.0"
   },
   "devDependencies": {
-    "eslint": "^3.17.0"
+    "eslint": "^7.6.0"
   }
 }
